@@ -1,0 +1,36 @@
+{
+  "ConfigCheck": "OK",
+  "production": "false",
+  "apiUrl": "http://localhost:8080/rest",
+  "socketHost": "localhost",
+  "socketPort": 8080,
+  "socketUrl": "ws://localhost:8080/ws",
+  "qrps-rate-panel": "/z7TG7zgSk/qrpay-api-dashboard?orgId=1&theme=light&panelId=16&refresh=5s",
+  "qrps-succeed-total-panel":"/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=8&refresh=5s",
+  "qrps-latency-panel": "/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=4&refresh=5s",
+  "qrps-latency-average-panel": "/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=12&refresh=5s",
+  "qrps-fail-panel": "/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=6&refresh=5s",
+  "qrps-fail-total-panel": "/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=14&refresh=5s" ,
+
+  "quarkus-rate-panel": "/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=2&refresh=5s",
+  "quarkus-succeed-total-panel":"/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=8&refresh=5s",
+  "quarkus-latency-panel": "/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=4&refresh=5s",
+  "quarkus-latency-average-panel": "/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=12&refresh=5s",
+  "quarkus-fail-panel": "/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=6&refresh=5s",
+  "quarkus-fail-total-panel": "/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=14&refresh=5s" ,
+
+  "springboot-rate-panel": "/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=2&refresh=5s",
+  "springboot-succeed-total-panel":"/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=8&refresh=5s",
+  "springboot-latency-panel": "/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=4&refresh=5s",
+  "springboot-latency-average-panel": "/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=12&refresh=5s",
+  "springboot-fail-panel": "/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=6&refresh=5s",
+  "springboot-fail-total-panel": "/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=14&refresh=5s" ,
+  "grafanaUrl": "http://localhost:3000/d-solo",
+  "grafanaLink": "http://grafana.k8s123",
+  "kialiLink": "http://kiali.k8s123",
+  "service-setting": [
+    {"service":"qrp-rest-cqrs", "hpa":"true"}
+  ],
+  "service-sequence":"",
+  "container": ""
+}

@@ -1,0 +1,38 @@
+{
+  "ConfigCheck": "OK",
+  "production": "false",
+  "apiUrl": "http://adm-frontend.k8s123/rest",
+  "socketUrl": "ws://adm-frontend.k8s123/ws",
+  "grafanaUrl": "http://adm-frontend.k8s123/d-solo",
+  "socketHost": "localhost",
+  "socketPort": 80,
+  "qrps-rate-panel": "/grafana/d-solo/z7TG7zgSk/qrpay-api-dashboard?orgId=1&theme=light&panelId=16&refresh=5s",
+  "qrps-succeed-total-panel":"/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=8&refresh=5s",
+  "qrps-latency-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=4&refresh=5s",
+  "qrps-latency-average-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=12&refresh=5s",
+  "qrps-fail-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=6&refresh=5s",
+  "qrps-fail-total-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=14&refresh=5s" ,
+
+  "quarkus-rate-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=2&refresh=5s",
+  "quarkus-succeed-total-panel":"/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=8&refresh=5s",
+  "quarkus-latency-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=4&refresh=5s",
+  "quarkus-latency-average-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=12&refresh=5s",
+  "quarkus-fail-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=6&refresh=5s",
+  "quarkus-fail-total-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=14&refresh=5s" ,
+
+  "springboot-rate-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=2&refresh=5s",
+  "springboot-succeed-total-panel":"/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=8&refresh=5s",
+  "springboot-latency-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=4&refresh=5s",
+  "springboot-latency-average-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=12&refresh=5s",
+  "springboot-fail-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=6&refresh=5s",
+  "springboot-fail-total-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=14&refresh=5s" ,
+
+  "grafanaLink": "http://adm-frontend.k8s123/grafana",
+  "kialiLink": "http://adm-frontend.k8s123/kiali",
+
+  "service-setting": [
+    {"service":"qrp-rest-cqrs", "hpa":"true"}
+  ],
+  "service-sequence":"",
+  "container": ""
+}

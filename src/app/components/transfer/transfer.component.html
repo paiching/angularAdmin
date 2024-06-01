@@ -1,0 +1,48 @@
+<div class="form-container">
+  <form id="transferForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="accountFrom">轉出帳號</label>
+      <select id="accountFrom" name="accountFrom" data-cy="directory">
+        <!-- Options should be added here -->
+        <option value="account1">1631330216313302</option>
+        <option value="account2">6312330216313302</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="transferType">轉帳方式</label>
+      <div class="transfer-type-options">
+        <button type="button" class="transfer-type-btn" id="instantTransfer" data-cy="bankCode">銀行代碼</button>
+        <button type="button" class="transfer-type-btn" id="scheduledTransfer" data-cy="checkAccount">約定/常用帳戶</button>
+        <button type="button" class="transfer-type-btn" id="regularTransfer" data-cy="directory">通訊錄</button>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="identity">通知人電子郵件/手機/Email</label>
+      <input type="text" id="identity" name="identity" placeholder="請輸入電子郵件/手機/Email" data-cy="identity">
+    </div>
+
+
+    <div class="input-group">
+      <label for="amount">轉帳金額</label>
+      <input type="number" id="amount" name="amount" placeholder="TWD" data-cy="amount">
+    </div>
+
+    <div class="input-group">
+      <label for="effectiveDate">轉帳生效日</label>
+      <input type="date" id="effectiveDate" name="effectiveDate" data-cy="date">
+    </div>
+
+    <div class="input-group">
+      <label for="note">交易備註</label>
+      <input type="text" id="note" name="note" placeholder="請輸入備註" data-cy="note">
+    </div>
+
+    <div class="button-group">
+      <input type="button" id="cancelBtn" value="取消交易" data-cy="cancelBtn">
+      <input type="submit" id="submitBtn" value="確認轉帳" data-cy="submitBtn" >
+    </div>
+
+  </form>
+</div>

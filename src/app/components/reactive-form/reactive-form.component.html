@@ -1,0 +1,182 @@
+<div class="form-container">
+  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <label for="idNumber">身分證字號</label>
+      <input type="text" id="idNumber" formControlName="idNumber" placeholder="請輸入身分證字號">
+        <!-- 錯誤訊息 -->
+          <div *ngIf="formSubmitted && reactiveForm.get('idNumber')?.invalid" >
+            <div *ngIf="reactiveForm.get('idNumber')?.errors?.['required']" class="error-message">
+              必填
+            </div>
+            <div *ngIf="reactiveForm.get('idNumber')?.value && reactiveForm.get('idNumber')?.errors?.['invalidTaiwanId']" class="error-message">
+              格式錯誤
+            </div>
+          </div>
+        <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="guiNumber">統一編號</label>
+      <input type="text" id="guiNumber" formControlName="guiNumber" placeholder="請輸入統一編號">
+              <!-- 錯誤訊息 -->
+              <div *ngIf="formSubmitted && reactiveForm.get('guiNumber')?.invalid" >
+                <div *ngIf="reactiveForm.get('guiNumber')?.errors?.['required']" class="error-message">
+                  必填
+                </div>
+                <div *ngIf="reactiveForm.get('guiNumber')?.value && reactiveForm.get('guiNumber')?.errors?.['invalidGuiNumber']" class="error-message">
+                  格式錯誤
+                </div>
+              </div>
+            <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="userName">用戶名稱</label>
+      <input type="text" id="userName" formControlName="userName" placeholder="請輸入用戶名稱">
+            <!-- 錯誤訊息 -->
+              <div *ngIf="formSubmitted && reactiveForm.get('userName')?.invalid" >
+                <div *ngIf="reactiveForm.get('userName')?.errors?.['required']" class="error-message">
+                  必填
+                </div>
+                <div *ngIf="reactiveForm.get('userName')?.value && reactiveForm.get('userName')?.errors?.['invalidUserName']" class="error-message">
+                  格式錯誤
+                </div>
+              </div>
+            <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="password">用戶密碼</label>
+      <input type="password" id="password" formControlName="password" placeholder="請輸入用戶密碼">
+                  <!-- 錯誤訊息 -->
+                  <div *ngIf="formSubmitted && reactiveForm.get('password')?.invalid" >
+                    <div *ngIf="reactiveForm.get('password')?.errors?.['required']" class="error-message">
+                      必填
+                    </div>
+                    <div *ngIf="reactiveForm.get('password')?.value && reactiveForm.get('password')?.errors?.['invalidPassword']" class="error-message">
+                      格式錯誤
+                    </div>
+                  </div>
+                <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="bankAccount">銀行帳號</label>
+      <input type="text" id="bankAccount" formControlName="bankAccount" placeholder="請輸入銀行帳號" data-cy="bank-account">
+                <!-- 錯誤訊息 -->
+                  <div *ngIf="formSubmitted && reactiveForm.get('bankAccount')?.invalid" >
+                    <div *ngIf="reactiveForm.get('bankAccount')?.errors?.['required']" class="error-message">
+                      必填
+                    </div>
+                    <div *ngIf="reactiveForm.get('bankAccount')?.value && reactiveForm.get('bankAccount')?.errors?.['invalidBankAccount']" class="error-message">
+                      格式錯誤
+                    </div>
+                  </div>
+                <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="identity">通知手機/Email</label>
+      <input type="text" id="contact" formControlName="contact" placeholder="請輸入手機/Email">
+                  <!-- 錯誤訊息 -->
+                     <div *ngIf="formSubmitted && reactiveForm.get('contact')?.invalid" >
+                      <div *ngIf="reactiveForm.get('contact')?.errors?.['required']" class="error-message">
+                        必填
+                      </div>
+                      <div *ngIf="reactiveForm.get('contact')?.value && reactiveForm.get('contact')?.errors?.['invalidContact']" class="error-message">
+                        格式錯誤
+                      </div>
+                    </div>
+                  <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" formControlName="email" placeholder="請輸入Email">
+                <!-- 錯誤訊息 -->
+                  <div *ngIf="formSubmitted && reactiveForm.get('email')?.invalid" >
+                    <div *ngIf="reactiveForm.get('email')?.errors?.['required']" class="error-message">
+                      必填
+                    </div>
+                    <div *ngIf="reactiveForm.get('email')?.value && reactiveForm.get('email')?.errors?.['invalidEmail']" class="error-message">
+                      格式錯誤
+                    </div>
+                  </div>
+                <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="mobile">行動電話 <span class="necessary">*</span></label>
+      <input type="text" id="mobile" formControlName="mobile" placeholder="請輸入行動電話號碼">
+    <!-- 錯誤訊息 -->
+      <div *ngIf="formSubmitted && reactiveForm.get('mobile')?.invalid" >
+        <div *ngIf="reactiveForm.get('mobile')?.errors?.['required']" class="error-message">
+          必填
+        </div>
+        <div *ngIf="reactiveForm.get('mobile')?.value && reactiveForm.get('mobile')?.errors?.['invalidMobile']" class="error-message">
+          格式錯誤
+        </div>
+      </div>
+    <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="amount">轉帳金額</label>
+      <input type="number" id="amount" formControlName="amount" placeholder="TWD">
+      <!-- 錯誤訊息 -->
+      <div *ngIf="formSubmitted && reactiveForm.get('amount')?.invalid" >
+        <div *ngIf="reactiveForm.get('amount')?.errors?.['required']" class="error-message">
+          必填
+        </div>
+        <div *ngIf="reactiveForm.get('amount')?.value && reactiveForm.get('amount')?.errors?.['invalidAmount']" class="error-message">
+          格式錯誤
+        </div>
+      </div>
+    <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="date">轉帳生效日</label>
+      <input type="date" id="date" formControlName="date" placeholder="">
+            <!-- 錯誤訊息 -->
+            <div *ngIf="formSubmitted && reactiveForm.get('date')?.invalid" >
+              <div *ngIf="reactiveForm.get('date')?.errors?.['required']" class="error-message">
+                必填
+              </div>
+              <div *ngIf="reactiveForm.get('date')?.value && reactiveForm.get('date')?.errors?.['invalidDate']" class="error-message">
+                格式錯誤
+              </div>
+            </div>
+          <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="input-group">
+      <label for="note">交易備註</label>
+      <input type="text" id="note" formControlName="note" placeholder="請輸入交易備註">
+      <div *ngIf="reactiveForm.get('note')?.errors?.['invalidNote']" class="error-message">
+        少於50字
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="verificationCode">驗證碼</label>
+      <input type="text" id="verificationCode" formControlName="verificationCode" placeholder="請輸入驗證碼">
+       <!-- 錯誤訊息 -->
+       <div *ngIf="formSubmitted && reactiveForm.get('verificationCode')?.invalid" >
+        <div *ngIf="reactiveForm.get('verificationCode')?.errors?.['required']" class="error-message">
+          必填
+        </div>
+        <div *ngIf="reactiveForm.get('verificationCode')?.value && reactiveForm.get('verificationCode')?.errors?.['invalidDateFormat']" class="error-message">
+          格式錯誤
+        </div>
+      </div>
+    <!-- 錯誤訊息 -->
+    </div>
+
+    <div class="button-group">
+      <input type="button" id="cancelBtn" value="取消交易">
+      <input type="submit" id="submitBtn" value="確認轉帳">
+    </div>
+
+  </form>
+</div>

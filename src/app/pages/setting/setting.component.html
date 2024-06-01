@@ -1,0 +1,13 @@
+<div class="page-wrapper">
+  <div style="margin-top:30px;">
+    <h1>設定</h1>
+  </div>
+  <div style="margin-bottom: 10px;"><span class="section-title">語系</span></div>
+  <mat-form-field style="margin-top: 5px;">
+    <mat-label>語系設定</mat-label>
+    <mat-select [(ngModel)]="selectedLang" (selectionChange)="changeLanguage($event.value)" data-cy="select-lang">
+      <mat-option value="zh" data-cy="cn">中文</mat-option>
+      <mat-option value="en" data-cy="en">English</mat-option>
+    </mat-select>
+  </mat-form-field>
+

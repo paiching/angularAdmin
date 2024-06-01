@@ -1,0 +1,91 @@
+<app-mega-menu></app-mega-menu>
+<!-- <div style="padding:16px">
+  <h3>功能簡介</h3>
+  <p>本標題會簡單解釋操作</p>
+</div> -->
+<div class="page-wrapper">
+
+<!-- <app-tabs></app-tabs> -->
+<div class="search-container">
+  <app-search-form></app-search-form>
+</div>
+<div class="card-container">
+  <mat-card class="example-card" (click)="selectCard(1)" style="cursor: pointer;">
+    <mat-card-header>
+      <mat-card-subtitle>未填工時檢核表</mat-card-subtitle>
+      <mat-card-title>當月彙總(年月, 部門)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="selectCard(1)">查詢</button>
+      <button mat-button>導出</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle>未填工時檢核表</mat-card-subtitle>
+      <mat-card-title>每日明細(年月, 部門)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>查詢</button>
+      <button mat-button>導出</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle>未審工時</mat-card-subtitle>
+      <mat-card-title>專案檢查(年月)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>查詢</button>
+      <button mat-button>導出</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle >工時回報</mat-card-subtitle>
+      <mat-card-title>明細資料(年月, PM/主管)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>查詢</button>
+      <button mat-button>導出</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle >專案投入</mat-card-subtitle>
+      <mat-card-title>職務工時(年度)</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p></p>
+      <mat-divider></mat-divider>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>查詢</button>
+      <button mat-button>導出</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>
+</div>

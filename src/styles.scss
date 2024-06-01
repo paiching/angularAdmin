@@ -1,0 +1,176 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$dashboard-app-primary: mat.define-palette(mat.$indigo-palette);
+$dashboard-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$dashboard-app-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$dashboard-app-theme: mat.define-light-theme((
+  color: (
+    primary: $dashboard-app-primary,
+    accent: $dashboard-app-accent,
+    warn: $dashboard-app-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($dashboard-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mdc-tab-indicator {
+  color: #2597fb;
+}
+.mat-primary .mat-ink-bar {
+  background-color: #2597fb !important;
+}
+
+.mat-toolbar.mat-primary {
+  background: #b31b1b !important;
+  color: white;
+}
+
+.diff{
+  background-color: #a9f7f9;
+}
+
+.diff2{
+  background-color: #cbf912;
+}
+
+
+.mat-mdc-tab-label-container{
+  height: 100px !important;
+  flex-grow: 0;
+}
+
+.mdc-tab__content{
+  height: 100px !important;
+  }
+
+.mat-mdc-tab.mdc-tab {
+  height: 100px !important;
+}
+
+.mat-mdc-tab-labels .service_config_tab .mat-mdc-tab.mdc-tab {
+  height: 100px !important;
+  flex-grow: 0;
+}
+
+
+//資源規劃tab大小
+#resource-setup .mat-mdc-tab .mdc-tab__content {
+  height: 80px !important;
+  flex-grow: 0;
+}
+
+#resource-setup .mdc-tab-indicator{
+  height: 80px !important;
+}
+
+
+#resource-setup .mat-mdc-tab-label-container{
+  height: 80px !important;
+  flex-grow: 0;
+}
+
+
+#resource-setup .mdc-tab__content{
+  height: 80px !important;
+  }
+
+#resource-setup .mat-mdc-tab.mdc-tab {
+  height: 80px !important;
+}
+
+
+mat-form-field{
+  margin-top: 10px;
+}
+
+#instance mat-slider {
+  margin-top: 0px;
+}
+
+
+.mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) .mat-mdc-form-field-infix {
+  padding-top: 27px !important;
+}
+
+
+.page-wrapper{
+  width:90%;
+  margin: auto;
+}
+
+.mdc-list-item{
+  cursor: pointer !important;
+}
+// .mat-drawer-content {
+//   overflow: hidden !important;
+// }
+.mat-drawer-container {
+  background-color: #fff !important;
+}
+
+html{
+  overflow: hidden;
+}
+
+#account_section .mat-mdc-form-field-focus-overlay{
+  display:none !important;
+}
+
+
+#account_section .mdc-line-ripple::before, .mdc-line-ripple::after {
+  border-bottom-style: none !important;
+  }
+
+
+  .mat-badge-warn .mat-badge-content {
+    font-size: 15px !important;
+  }
+
+
+.app-grafana{
+  background-color: #fff !important;
+}
+
+
+@font-face {
+  font-family: 'Material Menu Icon';
+  src: url('/assets/fonts/material-icons.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto-Regular.ttf') format('ttf');
+}
+
+
+.matIcon {
+  font-family: 'Material Menu Icon' !important;
+}
+
+

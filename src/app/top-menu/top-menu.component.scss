@@ -1,0 +1,40 @@
+.toolbar-item-spacer {
+  flex: 1 1 auto;
+}
+
+.app-container {
+  height: 90%;
+  margin: 0;
+}
+.app-sidenav {
+  width: 230px;
+}
+.app-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-toolbar.mat-primary {
+  background: #2597fb;
+  color: white;
+}
+
+.custom-badge {
+  margin-top: 16px;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+.notification-button{
+  position: relative;
+}
+
+.header-title {
+  padding-left: 20px;
+  font-size: large;
+  font-weight: bolder;
+}

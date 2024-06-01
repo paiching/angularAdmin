@@ -1,0 +1,46 @@
+[
+    {
+        "name": "quarkus-common-properties",
+        "data": {
+            "dev": {
+                "data": {
+                    "application.properties": "quarkus.log.level=DEBUG\nquarkus.log.category.\"com.hitrust.component1\".level=TRACE\nquarkus.log.category.\"com.hitrust.component2\".level=TRACE\nquarkus.datasource.db-kind = postgresql\nquarkus.datasource.username = hibernate\nquarkus.datasource.password = hibernate\nquarkus.datasource.jdbc.url = jdbc:postgresql://localhost:5432/hibernate_db\nquarkus.hibernate-orm.database.generation=drop-and-create"
+                },
+                "additionalProperties": {}
+            },
+            "prod": {
+                "data": {
+                    "application.properties": "quarkus.log.level=ERROR\nquarkus.log.category.\"com.hitrust.component1\".level=INFO\nquarkus.log.category.\"com.hitrust.component2\".level=INFO\nquarkus.datasource.db-kind = postgresql\nquarkus.datasource.username = hibernate-prod\nquarkus.datasource.password = hibernate-prod\nquarkus.datasource.jdbc.url = jdbc:postgresql://postgresql-prod:5432/hibernate_db\nquarkus.hibernate-orm.database.generation=drop-and-create"
+                },
+                "additionalProperties": {}
+            },
+            "test": {
+                "data": {
+                    "application.properties": "quarkus.log.level=INFO\nquarkus.log.category.\"com.hitrust.component1\".level=DEBUG\nquarkus.log.category.\"com.hitrust.component2\".level=DEBUG\nquarkus.datasource.db-kind = postgresql\nquarkus.datasource.username = hibernate-test\nquarkus.datasource.password = hibernate-test\nquarkus.datasource.jdbc.url = jdbc:postgresql://postgresql-test:5432/hibernate_db\nquarkus.hibernate-orm.database.generation=drop-and-create"
+                },
+                "additionalProperties": {}
+            },
+            "uat-jp": {
+                "data": {
+                    "application.properties": "quarkus.log.level=WARN\nquarkus.log.category.\"com.hitrust.component1\".level=DEBUG\nquarkus.log.category.\"com.hitrust.component2\".level=DEBUG\nquarkus.datasource.db-kind = postgresql\nquarkus.datasource.username = hibernate-uat-jp\nquarkus.datasource.password = hibernate-uat-jp\nquarkus.datasource.jdbc.url = jdbc:postgresql://postgresql-uat-jp:5432/hibernate_db\nquarkus.hibernate-orm.database.generation=drop-and-create"
+                },
+                "additionalProperties": {}
+            },
+            "uat-us": {
+                "data": {
+                    "application.properties": "quarkus.log.level=WARN\nquarkus.log.category.\"com.hitrust.component1\".level=DEBUG\nquarkus.log.category.\"com.hitrust.component2\".level=DEBUG\nquarkus.datasource.db-kind = postgresql\nquarkus.datasource.username = hibernate-uat-us\nquarkus.datasource.password = hibernate-uat-us\nquarkus.datasource.jdbc.url = jdbc:postgresql://postgresql-uat-us:5432/hibernate_db\nquarkus.hibernate-orm.database.generation=drop-and-create"
+                },
+                "additionalProperties": {}
+            }
+        },
+        "ownerName": "ap-001",
+        "ownerKind": "Application",
+        "targetService": [
+            "test001"
+        ],
+        "namespace": "mgo",
+        "resourceVersion": "1146841",
+        "uid": "522f770c-6b40-48ea-86c1-6ed9d6c66894",
+        "type": "name"
+    }
+]

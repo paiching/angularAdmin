@@ -1,0 +1,15 @@
+<div class="navbar">
+  <div *ngFor="let menuItem of megamenu" class="dropdown">
+    <button class="dropbtn">{{ menuItem.title }}
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="row">
+        <div class="column" *ngFor="let subItem of menuItem.item">
+          <h3>{{ subItem.title }}</h3>
+          <a href="#" *ngFor="let item of subItem.item">{{ item.title }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="title" style="margin: 50px auto;max-width: 319px;">
+   <div><h2>HiTRUST TimeSheet Report</h2></div>
+</div>
+<div class="form-container">
+  <form id="profileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="idNumber">員工編號</label>
+      <input type="text" id="idNumber" name="idNumber" placeholder="請輸入員工編號" data-cy="idNumber">
+    </div>
+    <div class="form-group">
+      <label for="password">密碼</label>
+      <input type="password" id="password" name="password" placeholder="請輸入密碼" data-cy="password">
+    </div>
+    <button type="submit" id="submitButton" data-cy="submit">提交</button>
+  </form>
+</div>
+
+

@@ -1,0 +1,38 @@
+{
+  "ConfigCheck": "OK",
+  "production": "false",
+  "apiUrl": "http://adm-frontend.k8s123/rest",
+  "socketPort": 8080,
+  "socketUrl": "ws://adm-frontend.k8s123/ws",
+  "grafanaUrl": "http://adm-frontend.k8s123/d-solo",
+
+  "qrps-rate-panel": "/grafana/d-solo/z7TG7zgSk/qrpay-api-dashboard?orgId=1&theme=light&panelId=16",
+  "qrps-succeed-total-panel":"/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=8",
+  "qrps-latency-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=4",
+  "qrps-latency-average-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=12",
+  "qrps-fail-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=6",
+  "qrps-fail-total-panel": "/grafana/d-solo/z7TG7zgSk/succeed?orgId=1&theme=light&panelId=14" ,
+
+  "quarkus-rate-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=2",
+  "quarkus-succeed-total-panel":"/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=8",
+  "quarkus-latency-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=4",
+  "quarkus-latency-average-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=12",
+  "quarkus-fail-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=6",
+  "quarkus-fail-total-panel": "/grafana/d-solo/z7TG7zgSkF/quarkus-native-dashboard?orgId=1&theme=light&panelId=14" ,
+
+  "springboot-rate-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=2",
+  "springboot-succeed-total-panel":"/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=8",
+  "springboot-latency-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=4",
+  "springboot-latency-average-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=12",
+  "springboot-fail-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=6",
+  "springboot-fail-total-panel": "/grafana/d-solo/z7TG7zgSkFk/spring-boot-dashboard?orgId=1&theme=light&panelId=14" ,
+
+  "grafanaLink": "/grafana",
+  "kialiLink": "http://kiali.k8s123",
+
+  "service-setting": [
+    {"service":"qrp-rest-cqrs", "hpa":"true"}
+  ],
+  "service-sequence":"",
+  "container": ""
+}

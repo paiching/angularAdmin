@@ -1,0 +1,8 @@
+<button #btn (resize)="onResize()" [ngStyle]="getButtonStyle(word)" (click)="getWidth()" >{{ word | transloco }}</button>
+<br>
+<span>寬: {{ buttonWidth }}px</span>
+<br>
+<span>X: {{ offsetX }}px</span>
+<br>
+<span>Y: {{ offsetY }}px</span>
+

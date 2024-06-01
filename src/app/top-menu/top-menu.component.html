@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" >
+  <button mat-icon-button (click)="toggleDrawer()">
+    <span class="matIcon">menu</span>
+  </button>
+
+  <span class="header-title">網際威信工時報表 | HiTRUST TimeSheet Report</span>
+  <span class="toolbar-item-spacer"></span>
+
+  <!-- <div class="demo-section">
+    <button class="notification-button" mat-icon-button matTooltip="通知" (click)="showNotification()" routerLink="message">
+
+      <span class="matIcon">notifications</span>
+
+    <span *ngIf="newNotificationsCount !== 0" matBadgePosition="before" [matBadge]="newNotificationsCount" matBadgeColor="warn" matBadgeOverlap="true"  class="notification-badge">
+    </span>
+
+    </button>
+  </div> -->
+
+  <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu" data-cy="account">
+      <span class="matIcon">account_circle</span>
+  </button>
+  <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below" >
+      <!-- <button mat-menu-item routerLink="account">
+          <mat-icon>person</mat-icon><span>賬號</span>
+      </button> -->
+      <button mat-menu-item routerLink="setting" data-cy="setting">
+          <span class="matIcon">settings</span><span>設定</span>
+      </button>
+      <button mat-menu-item routerLink="about" data-cy="about">
+          <span class="matIcon">help</span><span>關於</span>
+      </button>
+      <!-- <mat-divider></mat-divider>
+      <button mat-menu-item routerLink="#">
+          <mat-icon>exit_to_app</mat-icon>
+           <a >登出</a>
+      </button> -->
+  </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,37 @@
+<mat-nav-list>
+  <mat-accordion class="example-headers-align">
+
+    <div *ngFor="let menus of menus">
+      <mat-expansion-panel [class.mat-elevation-z0]="true" >
+
+        <mat-expansion-panel-header *ngIf="!menus.route">
+          {{ menus?.title | transloco }}
+        </mat-expansion-panel-header>
+
+        <mat-nav-list *ngFor="let sub of menus.item">
+
+          <!-- Internal Links -->
+          <a mat-list-item *ngIf="sub.title && !sub.item"
+             [routerLink]="currentApp + '/' + sub.title">
+            <span>{{ sub?.title | transloco }}</span>
+          </a>
+
+          <!-- Links with 'link' property -->
+          <a mat-list-item *ngIf="sub.link && !sub.item" href="{{sub.title}}">
+            <span>{{ sub?.title | transloco }}</span>
+          </a>
+
+        </mat-nav-list>
+      </mat-expansion-panel>
+
+      <div style="margin-left:23px">
+        <mat-nav-list *ngIf="menus.route">
+          <a style="margin-left: -15px;" mat-list-item [routerLink]="currentApp + '/' + menus.route">
+            {{ menus?.title | transloco }}
+          </a>
+        </mat-nav-list>
+      </div>
+    </div>
+
+  </mat-accordion>
+</mat-nav-list>

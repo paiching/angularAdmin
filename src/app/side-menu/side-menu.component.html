@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+
+    <!-- <span>
+      <span class="matIcon" routerLink="/" style="cursor: pointer;font-size: 25px;" (click)="clearSelections(appSelect)">apps</span>
+    </span> -->
+            <mat-form-field>
+              <mat-label>應用模組</mat-label>
+              <mat-select [(value)]="selected" (selectionChange)="changeApp($event)" #appSelect>
+                <mat-option value="/dashboard/home" data-cy="QRpay">報表系統</mat-option>
+                <mat-option value="framework" data-cy="Framework">報表系統2</mat-option>
+                <mat-option value="mesh" data-cy="Servicemesh">報表系統3</mat-option>
+                <mat-option value="system" data-cy="System">報表系統4</mat-option>
+              </mat-select>
+            </mat-form-field>
+    <app-menu-item [currentApp]="currentApp"></app-menu-item>
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

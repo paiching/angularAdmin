@@ -1,0 +1,45 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="search-form-container">
+  <div class="form-field">
+    <label for="work_year">工時年度:</label>
+    <select id="work_year" name="work_year">
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <!-- Add more years as needed -->
+    </select>
+  </div>
+  <div class="form-field">
+    <label for="work_ym">工時年月:</label>
+    <input type="date" id="work_ym" formControlName="work_ym">
+  </div>
+  <div class="form-field">
+    <label for="dept_no">部門代號:</label>
+    <select id="dept_no" formControlName="dept_no">
+        <option value="22101" selected>數金技術處</option>
+        <option value="22140">數金一部</option>
+        <option value="22150">數金二部</option>
+        <option value="22160">數金三部</option>
+        <option value="22300">安控服務部</option>
+        <option value="22102">企金技術處</option>
+        <option value="22110">企金二部</option>
+        <option value="22120">企金一部</option>
+        <option value="22230">企金三部</option>
+        <option value="22130">技術研發部</option>
+        <option value="22170">專案開發部</option>
+        <option value="215000">支付技術處</option>
+        <option value="21400">金流平台部</option>
+        <option value="21500">支付應用部</option>
+    </select>
+</div>
+
+  <div class="form-field">
+    <label for="proj_pm">員工編號:</label>
+    <input type="text" id="proj_pm" formControlName="proj_pm" >
+  </div>
+  <datalist id="typelist">
+    <!-- Option elements -->
+  </datalist>
+  <div class="form-field">
+    <button type="submit" [disabled]="searchForm.invalid">查詢</button>
+  </div>
+</form>
+
